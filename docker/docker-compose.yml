@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  postgres:
+    container_name: pg_go_server
+    image: "postgres:latest"
+    environment:
+      DATABASE_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: go_server
+    ports:
+      - "5434:5432"
+
+  redis:
+    container_name: redis_go_server
+    image: "redis:alpine"
+    command: redis-server --requirepass t4H793ZvT6RjsfWE
+    ports:
+      - "6380:6379"
+    volumes:
+      - "./storage/redis_data:/data"

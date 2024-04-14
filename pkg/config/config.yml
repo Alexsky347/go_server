@@ -1,0 +1,12 @@
+environment: production
+http_port: 8881
+hostname: localhost
+auth_secret: ######
+
+log_level: debug
+
+database_url: postgres://postgres:1234@127.0.0.1:5434/postgres
+
+redis_uri: localhost:6380
+redis_password: t4H793ZvT6RjsfWE
+redis_db: 0
