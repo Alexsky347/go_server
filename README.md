@@ -18,7 +18,7 @@ An example of go server
 
 ### Config
 - You should modify `pkg/config/config.yaml`
-````
+```
 $ docker compose -f docker/docker-compose.yml up -d
 ```
 
