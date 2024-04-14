@@ -18,6 +18,9 @@ An example of go server
 
 ### Config
 - You should modify `pkg/config/config.yaml`
+````
+$ docker compose -f docker/docker-compose.yml up -d
+```
 
 ```yaml
 environment: production
@@ -32,7 +35,7 @@ redis_db: 0
 
 ### Run
 ```shell script
-$ go run cmd/main.go 
+$ make run
 ```
 ```
 2023-09-12T15:18:36.684+0700    INFO    http/server.go:58       HTTP server is listening on PORT: 8888
@@ -41,10 +44,10 @@ $ go run cmd/main.go
 
 ### Test
 ```shell script
-$ go test
+$ make test
 ```
 
 ### Test with Coverage
 ```shell script
-go test -timeout 9000s -a -v -coverprofile=coverage.out -coverpkg=./... ./...
+make test -timeout 9000s -a -v -coverprofile=coverage.out -coverpkg=./... ./...
 ```
